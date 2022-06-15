@@ -37,6 +37,13 @@ class LinkedList:
         if not prev_node:
             print("Previous node not in the list")
             return
+        curr = self.head
+        while curr:
+            if curr.value == prev_node:
+                break
+            curr = curr.next
+
+        prev_node = curr
         new_node = Node(value)
         new_node.next = prev_node.next
         prev_node.next = new_node
@@ -54,6 +61,27 @@ class LinkedList:
                     current.next = new_node
                     break
                 current = current.next
+
+    def find_Kth_from_End(self, k):
+        if k < 0:
+            return "Invalid Input, K is negative number"
+        current = self.head
+        second_current = self.head
+
+        count = 0
+
+        while second_current:
+            count += 1
+            if k == count:
+                break
+            second_current = second_current.next
+            if not second_current:
+                return "Invalid Input, K is out of the linked-list"
+
+        while second_current.next:
+            second_current = second_current.next
+            current = current.next
+        return current.value
 
     def __str__(self):
         current = self.head
@@ -78,5 +106,6 @@ if __name__ == '__main__':
     llist.push(1)
     llist.insert_after_node(llist.head.next, 77)
     print(llist.search(1))
+    print(llist.find_Kth_from_End(6))
     print(llist)
 
