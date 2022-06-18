@@ -9,11 +9,23 @@ class LinkedList:
         self.head = None
 
     def push(self, value):
+        """
+        Takes a value and pushes this value in a new node at the first of the linked-list
+
+        :param value: int, str
+        :return: a new node at the first of the linked list with the given value.
+        """
         new_node = Node(value)
         new_node.next = self.head
         self.head = new_node
 
     def search(self, x):
+        """
+        Takes a value to search for in the linked-list
+
+        :param x: int, str
+        :return: A boolean value (True or False)
+        """
         current = self.head
         while current is not None:
             if current.value == x:
@@ -24,6 +36,12 @@ class LinkedList:
 
 
     def append(self, value):
+        """
+        Takes a value and add a new node with the given value to the end of the linked-list.
+
+        :param value: int, str
+        :return: A new node with the given value
+        """
         new_node = Node(value)
         if self.head is None:
             self.head = new_node
@@ -34,6 +52,13 @@ class LinkedList:
         last_node.next = new_node
 
     def insert_after_node(self, prev_node, value):
+        """
+        Add a new node with a given value after a specific node.
+
+        :param prev_node:
+        :param value: int, str
+        :return: A new node after the specified node.
+        """
         if not prev_node:
             print("Previous node not in the list")
             return
@@ -49,6 +74,13 @@ class LinkedList:
         prev_node.next = new_node
 
     def insert_before_node(self, value, newVal):
+        """
+        Add a new node with a given value before a specific value.
+
+        :param value:
+        :param newVal: int, str
+        :return: A new node before the specified node.
+        """
         new_node = Node(newVal)
         current = self.head
         if current.value == value:
@@ -63,6 +95,12 @@ class LinkedList:
                 current = current.next
 
     def find_Kth_from_End(self, k):
+        """
+        A function to find a specific node, (Kth node starting from the end of the linked-list).
+
+        :param k: The index of the specified node
+        :return: The value of the specified node.
+        """
         if k < 0:
             return "Invalid Input, K is negative number"
         current = self.head

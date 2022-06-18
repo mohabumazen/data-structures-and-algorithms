@@ -3,3 +3,7 @@
 
 # Challenge 07
 - This challenge is about adding a new method for finding the Kth element from the end.
+
+## Whiteboard Process
+
+![Whiteboard Workflow](../assets/Challenge%2007.jpg)
