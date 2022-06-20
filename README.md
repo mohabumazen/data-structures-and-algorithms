@@ -12,6 +12,7 @@
 | linked-list         | [Challenge05](Data_Structures/Linked_list/linked_list.md)                 |
 | linked-list         | [Challenge06](Data_Structures/Linked_list/linked_list.md)                 |
 | linked-list         | [Challenge07](Data_Structures/Linked_list/linked_list.md)                 |
+| linked-list-zip     | [Challenge08](code_challenges/linked_list_zip/llist_zip.md)               |
 
 | Data structure  Name | Link                                                 |
 |----------------------|------------------------------------------------------|
